@@ -58,3 +58,6 @@ D:\WebBanHang\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\TrangChus\Showsp.g.
 D:\WebBanHang\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\TrangChus\Details.g.cshtml.cs
 D:\WebBanHang\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Index.g.cshtml.cs
 D:\WebBanHang\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\SmallPager.g.cshtml.cs
+D:\WebBanHang\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\TrangChus\_SearchPartial.g.cshtml.cs
+D:\WebBanHang\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\TrangChus\Search.g.cshtml.cs
+D:\WebBanHang\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\TrangChus\TimKiem.g.cshtml.cs

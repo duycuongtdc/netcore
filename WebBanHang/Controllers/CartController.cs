@@ -31,13 +31,14 @@ namespace WebBanHang.Controllers
         }
 
         [Route("buy/{id}")]
-        public IActionResult Buy(int id)
+        public IActionResult Buy(int id,int soluong)
         {
             
             if (SessionHelper.Get<List<Item>>(HttpContext.Session, "cart") == null)
             {
                 List<Item> cart = new List<Item>();
                 cart.Add(new Item { Product = _context.HangHoas.Find(id), Quantity = 1 });
+                
                 SessionHelper.Set(HttpContext.Session, "cart", cart);
             }
             else
@@ -54,6 +55,7 @@ namespace WebBanHang.Controllers
                 }
                 SessionHelper.Set(HttpContext.Session, "cart", cart);
             }
+
             return RedirectToAction("Index");
         }
 

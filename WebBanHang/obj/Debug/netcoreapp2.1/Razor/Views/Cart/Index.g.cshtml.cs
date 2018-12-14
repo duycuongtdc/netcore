@@ -77,7 +77,7 @@ using WebBanHang.Models;
             WriteLiteral("    <tr>\r\n        <td>");
             EndContext();
             BeginContext(179, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "736d6ae81013484f86592c1a9ccd8ea0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "33ee8ad09e8a4113ad51ee44b86ee7c0", async() => {
                 BeginContext(258, 6, true);
                 WriteLiteral("Remove");
                 EndContext();
@@ -154,7 +154,7 @@ using WebBanHang.Models;
             WriteLiteral("</td>\r\n        <td>");
             EndContext();
             BeginContext(454, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "303d9cb3e55c46809e914eb5b0cf30e4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3dd391b6867849eaabe6d3ea0bafb2c5", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

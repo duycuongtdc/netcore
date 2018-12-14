@@ -45,6 +45,7 @@ namespace WebBanHang.Controllers
             return View(model);
 
         }
+
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -60,6 +61,29 @@ namespace WebBanHang.Controllers
             }
 
             return View(loai);
+        }
+        public IActionResult Search(string Keyword = "")
+        {
+            var data = _context.HangHoas.Where(p => p.TenHH.Contains(Keyword))
+          .Include(p => p.Loai)
+            .ToList();
+            return View(data);
+        }
+        public IActionResult JSONSearch(string Name = "", double? From = 0,
+        double? To = double.MaxValue)
+        {
+            var data = _context.HangHoas.Where(p => p.TenHH.Contains(Name) &&
+           p.DonGia >= From && p.DonGia <= To)
+            .Select(p => new {
+                TenHH = p.TenHH,
+                DonGia = p.DonGia,
+                Loai = p.Loai.TenLoai
+            });
+            return Json(data);
+        }
+        public IActionResult TimKiem()
+        {
+            return View();
         }
     }
 }

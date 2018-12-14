@@ -74,8 +74,8 @@
             </div>
             <div class="col-md-4">
                 <form class="form-search">
-                    <input type="text" class="input-medium search-query">
-                    <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+                    <input type="text" class="input-medium search-query" id="txtSearch">
+                    <button type="submit" class="btn" asp-action="Search" asp-controller="TrangChus"><span class="glyphicon glyphicon-search"></span></button>
                 </form>
             </div>
             <div class="col-md-4">
@@ -99,9 +99,9 @@
                             <div class="dropdown-inner">
                                 <ul class="list-unstyled">
                                     <li>
-                                       
+
                                     </li>
-                                  
+
                                 </ul>
                             </div>
                         </div>
@@ -154,10 +154,13 @@
         </div>
     </nav>
     @RenderBody()
+    <environment names="Development">
+        @RenderSection("Scripts", required: false)
+    </environment>
     <!--//////////////////////////////////////////////////-->
     <!--///////////////////HomePage///////////////////////-->
     <!--//////////////////////////////////////////////////-->
-   
+
     <footer>
         <div class="container">
             <div class="wrap-footer">

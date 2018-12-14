@@ -37,7 +37,7 @@
 
 <body>
 
-    @RenderBody()
+
 
 
     <!--Top-->
@@ -73,8 +73,8 @@
             </div>
             <div class="col-md-4">
                 <form class="form-search">
-                    <input type="text" class="input-medium search-query">
-                    <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+                    <input type="text" class="input-medium search-query" name="Keyword">
+                    <button asp-action="Search" asp-controller="TrangChus" type="submit" class="btn" ><span class="glyphicon glyphicon-search"></span></button>
                 </form>
             </div>
             <div class="col-md-4">
@@ -97,7 +97,7 @@
                         <div class="dropdown-menu">
                             <div class="dropdown-inner">
                                 <ul class="list-unstyled">
-                                   <li>
+                                    <li>
                                         @foreach (var item in Model)
                                         {
 
@@ -105,8 +105,8 @@
                                             <a asp-action="Showsp" asp-route-id="@item.MaLoai"> @Html.DisplayFor(modelItem => item.TenLoai)</a>
 
                                         }
-                                        </li>
-</ul>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </li>
@@ -160,6 +160,9 @@
     <!--//////////////////////////////////////////////////-->
     <!--///////////////////HomePage///////////////////////-->
     <!--//////////////////////////////////////////////////-->
+    @RenderBody()
+    <div id="result"></div>
+
     <div id="page-content" class="home-page">
         <div class="container">
             <div class="row">
@@ -430,3 +433,4 @@
 
 </body>
 </html>
+

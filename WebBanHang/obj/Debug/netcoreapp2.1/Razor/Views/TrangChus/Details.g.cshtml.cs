@@ -67,12 +67,12 @@ using WebBanHang.Models;
             WriteLiteral("\r\n<h2>CHI TIẾT SẢN PHẨM</h2>\r\n\r\n<div class=\"product\">\r\n\r\n\r\n\r\n        <div class=\"image\">\r\n            ");
             EndContext();
             BeginContext(235, 113, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1ec5f7e9ee0b495ea27a43599cf0ae96", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b1209538a0d2404294f4ef924b32df15", async() => {
                 BeginContext(286, 1, true);
                 WriteLiteral(" ");
                 EndContext();
                 BeginContext(287, 57, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f1daa7e59618426eae57ae6597b00932", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "107796571a49472fb144b3a9e0aabe41", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
