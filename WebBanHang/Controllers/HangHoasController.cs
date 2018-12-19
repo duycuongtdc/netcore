@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -26,10 +27,11 @@ namespace WebBanHang.Controllers
         public async Task<IActionResult> Index(int page=1)
         {
             var query = _context.HangHoas.AsNoTracking().OrderBy(p => p.MaHH);
-            var model = await PagingList.CreateAsync(query, 1, page);
+            var model = await PagingList.CreateAsync(query, 10, page);
             return View(model);
         }
        
+
 
         // GET: HangHoas/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -62,8 +64,9 @@ namespace WebBanHang.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaHH,TenHH,Hinh,MoTa,DonGia,SoLuong,MaLoai")] HangHoa hangHoa,IFormFile fHinh)
+        public async Task<IActionResult> Create([Bind("MaHH,TenHH,Hinh,MoTa,DonGia,SoLuong,MaLoai,NgayDang,NoiBat")]  HangHoa hangHoa, IFormFile fHinh)
         {
+          
             if (fHinh != null)
             {
                 var path = Path.Combine(Directory.GetCurrentDirectory(),
@@ -73,7 +76,10 @@ namespace WebBanHang.Controllers
                     await fHinh.CopyToAsync(file);
                 }
                 hangHoa.Hinh = fHinh.FileName;
+            
             }
+            hangHoa.NgayDang = DateTime.Now;
+        
             if (ModelState.IsValid)
             {
                
@@ -207,5 +213,6 @@ IFormFile fHinh)
         {
             return View();
         }
+        
     }
 }

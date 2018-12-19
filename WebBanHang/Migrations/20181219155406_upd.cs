@@ -2,7 +2,7 @@
 
 namespace WebBanHang.Migrations
 {
-    public partial class ab : Migration
+    public partial class upd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/Layout_Sanpham.cshtml";
 }
 
-<h2>TimKiem Nang cao</h2>
+<h2>Tìm Kiếm Nâng Cao</h2>
 
 <input type="text" id="txtTen" placeholder="Nhập tên" /><br />
 Giá từ <input type="number" min="0" id="txtGiaTu" />
@@ -44,6 +44,7 @@ Giá từ <input type="number" min="0" id="txtGiaTu" />
                         //tạo nội dung cho thẻ tr
                         $("<td/>").html(index + 1).appendTo(tr);
                         $("<td/>").html(value.tenHH).appendTo(tr);
+                       
                         $("<td/>").html(value.donGia).appendTo(tr);
                         $("<td/>").html(value.loai).appendTo(tr);
                         //thêm vào tbody

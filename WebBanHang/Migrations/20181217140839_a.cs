@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebBanHang.Migrations
 {
-    public partial class efcode : Migration
+    public partial class a : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,11 +14,46 @@ namespace WebBanHang.Migrations
                 {
                     MaLoai = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    TenLoai = table.Column<string>(maxLength: 50, nullable: false)
+                    TenLoai = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Loai", x => x.MaLoai);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Oder",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Status = table.Column<bool>(nullable: false),
+                    CustomerID = table.Column<int>(nullable: false),
+                    ShipName = table.Column<string>(nullable: true),
+                    ShipMobile = table.Column<int>(nullable: false),
+                    ShipAddress = table.Column<string>(nullable: true),
+                    ShipEmail = table.Column<string>(nullable: true),
+                    CreatedDate = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Oder", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "OderDetail",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    OderID = table.Column<int>(nullable: false),
+                    Quantity = table.Column<int>(nullable: false),
+                    Gia = table.Column<double>(nullable: false),
+                    MaHH = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OderDetail", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -44,7 +80,9 @@ namespace WebBanHang.Migrations
                     MoTa = table.Column<string>(nullable: true),
                     DonGia = table.Column<double>(nullable: false),
                     SoLuong = table.Column<int>(nullable: false),
-                    MaLoai = table.Column<int>(nullable: false)
+                    MaLoai = table.Column<int>(nullable: false),
+                    NgayDang = table.Column<DateTime>(nullable: false),
+                    DaMua = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -67,6 +105,12 @@ namespace WebBanHang.Migrations
         {
             migrationBuilder.DropTable(
                 name: "HangHoa");
+
+            migrationBuilder.DropTable(
+                name: "Oder");
+
+            migrationBuilder.DropTable(
+                name: "OderDetail");
 
             migrationBuilder.DropTable(
                 name: "TaiKhoan");

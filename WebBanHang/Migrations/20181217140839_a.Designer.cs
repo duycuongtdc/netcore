@@ -10,8 +10,8 @@ using WebBanHang.Models;
 namespace WebBanHang.Migrations
 {
     [DbContext(typeof(MyDBContext))]
-    [Migration("20181213094527_adddb")]
-    partial class adddb
+    [Migration("20181217140839_a")]
+    partial class a
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,6 +27,8 @@ namespace WebBanHang.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("DaMua");
+
                     b.Property<double>("DonGia");
 
                     b.Property<string>("Hinh");
@@ -34,6 +36,8 @@ namespace WebBanHang.Migrations
                     b.Property<int>("MaLoai");
 
                     b.Property<string>("MoTa");
+
+                    b.Property<DateTime>("NgayDang");
 
                     b.Property<int>("SoLuong");
 
@@ -54,9 +58,7 @@ namespace WebBanHang.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("TenLoai")
-                        .IsRequired()
-                        .HasMaxLength(50);
+                    b.Property<string>("TenLoai");
 
                     b.HasKey("MaLoai");
 
@@ -73,26 +75,38 @@ namespace WebBanHang.Migrations
 
                     b.Property<int>("CustomerID");
 
+                    b.Property<string>("ShipAddress");
+
+                    b.Property<string>("ShipEmail");
+
+                    b.Property<int>("ShipMobile");
+
+                    b.Property<string>("ShipName");
+
+                    b.Property<bool>("Status");
+
                     b.HasKey("ID");
 
                     b.ToTable("Oder");
                 });
 
-            modelBuilder.Entity("WebBanHang.Models.OderDetails", b =>
+            modelBuilder.Entity("WebBanHang.Models.OderDetail", b =>
                 {
-                    b.Property<int>("ProductID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("OderID");
+                    b.Property<double>("Gia");
 
-                    b.Property<double>("Price");
+                    b.Property<int>("MaHH");
+
+                    b.Property<int>("OderID");
 
                     b.Property<int>("Quantity");
 
-                    b.HasKey("ProductID");
+                    b.HasKey("ID");
 
-                    b.ToTable("OderDetails");
+                    b.ToTable("OderDetail");
                 });
 
             modelBuilder.Entity("WebBanHang.Models.TaiKhoan", b =>

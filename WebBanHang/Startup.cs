@@ -50,8 +50,8 @@ namespace WebBanHang
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
  .AddCookie(options =>
  {
-     options.LoginPath = "/Admin/Login";
-     options.AccessDeniedPath = "/Admin/Access";
+     options.LoginPath = "/TrangChus/Login";
+     options.AccessDeniedPath = "/TrangChus/Access";
  });
         }
 

@@ -20,19 +20,29 @@
             <th>
                 Tên Hàng
             </th>
-            <th>Ảnh
+            <th>
+                Ảnh
             </th>
             <th>
-               Mô Tả
+                Mô Tả
             </th>
             <th>
-              Giá
+                Giá
             </th>
             <th>
-               Số Lượng
+                Số Lượng
             </th>
             <th>
-              Loại
+                Mã Loại
+            </th>
+            <th>
+                Ngày Đăng
+            </th>
+            <th>
+                Nổi bật
+            </th>
+            <th>
+                Đã Mua
             </th>
             <th></th>
         </tr>
@@ -56,7 +66,16 @@
                 @Html.DisplayFor(modelItem => item.SoLuong)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Loai.TenLoai)
+                @Html.DisplayFor(modelItem => item.MaLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayDang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoiBat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DaMua)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MaHH">Edit</a> |

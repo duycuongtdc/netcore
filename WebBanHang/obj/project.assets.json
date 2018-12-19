@@ -12257,11 +12257,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WebBanHang\\WebBanHang\\WebBanHang.csproj",
+      "projectUniqueName": "D:\\netcore\\WebBanHang\\WebBanHang.csproj",
       "projectName": "WebBanHang",
-      "projectPath": "D:\\WebBanHang\\WebBanHang\\WebBanHang.csproj",
+      "projectPath": "D:\\netcore\\WebBanHang\\WebBanHang.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "D:\\WebBanHang\\WebBanHang\\obj\\",
+      "outputPath": "D:\\netcore\\WebBanHang\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

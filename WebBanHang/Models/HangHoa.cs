@@ -20,9 +20,14 @@ namespace WebBanHang.Models
         [Range(0, double.MaxValue)]
         public double DonGia { get; set; }
         [Range(0, int.MaxValue)]
+
         public int SoLuong { get; set; }
-        public int MaLoai { get; set; }
         [ForeignKey("MaLoai")]
+        public int MaLoai { get; set; }
+        public DateTime NgayDang { get; set; }
+       
         public Loai Loai { get; set; }
+        public int DaMua { get; set; }
+        public bool NoiBat { get; set; }
     }
 }
