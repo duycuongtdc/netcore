@@ -12,7 +12,9 @@ namespace WebBanHang.Models
     {
         [Key]
         public int ID { get; set; }
+        public string TieuDe { get; set; }
         public string NoiDung { get; set; }
+        public string Hinh { get; set; }
         [ForeignKey("MaLoai")]
         public int MaLoai { get; set; }
     }

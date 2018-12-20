@@ -67,7 +67,7 @@ using WebBanHang.Models;
             WriteLiteral("\r\n<h2>Index</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(121, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3d52741505f148fbbdc25c517ca906dd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e0dddd5a2f7d4a7a9097ecf3236d6f14", async() => {
                 BeginContext(144, 10, true);
                 WriteLiteral("Create New");
                 EndContext();
@@ -170,7 +170,7 @@ Gia            </th>
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(957, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e81c8699979d4355b557d0df8dab89b4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "961ce046548847938634c3efb342ea66", async() => {
                 BeginContext(1002, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -205,7 +205,7 @@ Gia            </th>
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1030, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05f2c7541dbe44a28958355a98f7776f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "69fe238cb7094fac90b869c1536e8330", async() => {
                 BeginContext(1078, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -240,7 +240,7 @@ Gia            </th>
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1109, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "82ac706227084eb7afaf64f5d53a779b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3db9d55e5794eba9d52cf964816c2ce", async() => {
                 BeginContext(1156, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

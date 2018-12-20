@@ -86,7 +86,7 @@ Write(ViewData["Message"]);
             WriteLiteral("<div class=\"container\">\r\n    <div class=\"heading\"><h2>Thông Tin Khách Hàng</h2></div>\r\n    ");
             EndContext();
             BeginContext(303, 722, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "27c3026ed6c34ad486bee1773195199a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1b6ccf53e41d44fb8bc255330cc76420", async() => {
                 BeginContext(367, 651, true);
                 WriteLiteral(@"
         <div class=""form-group"">

@@ -44,6 +44,11 @@
                 <select asp-for="MaLoai" class="form-control" asp-items="ViewBag.MaLoai"></select>
             </div>
             <div class="form-group">
+                <label asp-for="GiamGia" class="control-label"></label>
+                <input asp-for="GiamGia" class="form-control" />%
+                <span asp-validation-for="GiamGia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input asp-for="NoiBat" type="checkbox">  Sản phẩm nổi bật
             </div>
             <div class="form-group">

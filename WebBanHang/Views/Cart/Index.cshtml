@@ -28,7 +28,7 @@
                                             <li>ID:@item.Product.MaHH</li>
                                         </ul>
                                     </div>
-                                    <div class="price">$@item.Product.DonGia<span>$98</span></div>
+                                    <div class="price">$@item.Product.DonGia<span>@item.Product.GiamGia%</span></div>
                                     <label>Quantity: </label> <input name="quantity" class="form-inline quantity" type="text" value="@item.Quantity" asp-route-id="@item.Product.MaHH">
                                     <hr>
                                     <a asp-action="remove" asp-controller="cart" asp-route-id="@item.Product.MaHH" class="btn btn-default pull-right">REMOVE</a>
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 }
-            <input type="submit" value="Update" />
+            <input type="submit" value="Update Shopping Cart" />
         }
             
 

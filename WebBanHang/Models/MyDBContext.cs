@@ -24,5 +24,6 @@ namespace WebBanHang.Models
         public DbSet<WebBanHang.Models.BaiViet> BaiViet { get; set; }
 
         public DbSet<WebBanHang.Models.QuangCao> QuangCao { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
     }
 }

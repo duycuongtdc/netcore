@@ -143,13 +143,23 @@
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+
+                                    <a asp-action="GioiThieu" asp-controller="TrangChus"> Giới Thiệu</a>
+                                    <a asp-action="DieuKhoan" asp-controller="TrangChus"> Điều Khoản</a>
+                                    <a asp-action="ChinhSach" asp-controller="TrangChus"> Chính Sách và Dịch Vụ</a>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li >
+                        <a asp-action="showbaiviet" asp-controller="TrangChus">NEWS</a>
                         
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">NEWS</a>
-                        
-                    </li>
-                    <li><a href="category.html">CONTACT</a></li>
+                    <li><a asp-action="Contact" asp-controller="TrangChus">CONTACT</a></li>
                 </ul>
             </div>
         </div>
@@ -193,8 +203,8 @@
                     <div class="col-md-3 col-footer footer-4">
                         <div class="heading"><h4>Contact Us</h4></div>
                         <ul>
-                            <li><span class="glyphicon glyphicon-home"></span>California, United States 3000009</li>
-                            <li><span class="glyphicon glyphicon-earphone"></span>+91 8866888111</li>
+                            <li><span class="glyphicon glyphicon-home"></span>Ho Chi Minh, VietNam </li>
+                            <li><span class="glyphicon glyphicon-earphone"></span>+84 000000000</li>
                             <li><span class="glyphicon glyphicon-envelope"></span>infor@yoursite.com</li>
                         </ul>
                     </div>

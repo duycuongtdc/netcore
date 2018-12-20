@@ -64,7 +64,7 @@ using WebBanHang.Models;
             WriteLiteral("<h3>");
             EndContext();
             BeginContext(48, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "42a1652aab884ad8b036813c76762ecb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ba7a42f8ef8549289ef828a8b892d780", async() => {
                 BeginContext(98, 17, true);
                 WriteLiteral("Tìm kiếm nâng cao");
                 EndContext();

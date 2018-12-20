@@ -65,7 +65,7 @@ using WebBanHang.Models;
             WriteLiteral("\r\n<br />\r\n<h2>Mua Hàng Thành Công</h2>\r\n");
             EndContext();
             BeginContext(135, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3fe0ac0b7646425796989875c54f2513", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "67f749a87a5f4684909f0c53fd7a617e", async() => {
                 BeginContext(184, 17, true);
                 WriteLiteral("Quay về trang chủ");
                 EndContext();

@@ -19,6 +19,44 @@ namespace WebBanHang.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("WebBanHang.Models.BaiViet", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Hinh");
+
+                    b.Property<int>("MaLoai");
+
+                    b.Property<string>("NoiDung");
+
+                    b.Property<string>("TieuDe");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("BaiViet");
+                });
+
+            modelBuilder.Entity("WebBanHang.Models.Contact", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("NoiDung");
+
+                    b.Property<int>("Phone");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Contact");
+                });
+
             modelBuilder.Entity("WebBanHang.Models.HangHoa", b =>
                 {
                     b.Property<int>("MaHH")
@@ -28,6 +66,8 @@ namespace WebBanHang.Migrations
                     b.Property<int>("DaMua");
 
                     b.Property<double>("DonGia");
+
+                    b.Property<int>("GiamGia");
 
                     b.Property<string>("Hinh");
 
@@ -106,7 +146,24 @@ namespace WebBanHang.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("OderID");
+
                     b.ToTable("OderDetail");
+                });
+
+            modelBuilder.Entity("WebBanHang.Models.QuangCao", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Hinh");
+
+                    b.Property<int>("MaHH");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("QuangCao");
                 });
 
             modelBuilder.Entity("WebBanHang.Models.TaiKhoan", b =>
@@ -128,6 +185,14 @@ namespace WebBanHang.Migrations
                     b.HasOne("WebBanHang.Models.Loai", "Loai")
                         .WithMany()
                         .HasForeignKey("MaLoai")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("WebBanHang.Models.OderDetail", b =>
+                {
+                    b.HasOne("WebBanHang.Models.Oder", "oder")
+                        .WithMany()
+                        .HasForeignKey("OderID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

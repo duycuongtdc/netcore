@@ -35,7 +35,7 @@ namespace WebBanHang.Controllers
             }
             else
             ViewBag.cart = cart;
-            ViewBag.total = cart.Sum(item => item.Product.DonGia * item.Quantity);
+            ViewBag.total = cart.Sum(item => (item.Product.DonGia * item.Quantity)-((item.Product.GiamGia)*(item.Product.DonGia))/100);
             ViewBag.quantity = cart.Sum(item => item.Quantity);
             return View();
         }

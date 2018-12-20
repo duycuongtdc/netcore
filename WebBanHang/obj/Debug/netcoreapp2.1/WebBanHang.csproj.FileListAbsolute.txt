@@ -153,3 +153,14 @@ D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\QuangCaos\Delete.g.csh
 D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\QuangCaos\Details.g.cshtml.cs
 D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\QuangCaos\Edit.g.cshtml.cs
 D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\QuangCaos\Index.g.cshtml.cs
+D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\TrangChus\XemBaiViet.g.cshtml.cs
+D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\TrangChus\showbaiviet.g.cshtml.cs
+D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\TrangChus\GioiThieu.g.cshtml.cs
+D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\TrangChus\DieuKhoan.g.cshtml.cs
+D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\TrangChus\ChinhSach.g.cshtml.cs
+D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\TrangChus\Contact.g.cshtml.cs
+D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\Contacts\Create.g.cshtml.cs
+D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\Contacts\Delete.g.cshtml.cs
+D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\Contacts\Details.g.cshtml.cs
+D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\Contacts\Edit.g.cshtml.cs
+D:\netcore\WebBanHang\obj\Debug\netcoreapp2.1\Razor\Views\Contacts\Index.g.cshtml.cs

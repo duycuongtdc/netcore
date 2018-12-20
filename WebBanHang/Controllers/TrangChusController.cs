@@ -35,22 +35,73 @@ namespace WebBanHang.Controllers
             var model3 = _context.HangHoas.AsNoTracking().OrderByDescending(p => p.DaMua);
             var model3s = await PagingList.CreateAsync(model3, 4, page);
             ViewBag.model3s = model3s;
+           
             return View(models);
         }
-       
-        public async Task<IActionResult> Showsp(int? id, int page=1)
+
+       public async Task<IActionResult> showbaiviet()
+        {
+            var model = _context.loais.ToList();
+            ViewBag.model = model;
+
+            var loai = _context.BaiViet.ToList();
+                
+
+            return View(loai);
+        }
+        public async Task<IActionResult> GioiThieu()
+        {
+            var model = _context.loais.ToList();
+            ViewBag.model = model;
+
+           
+
+
+            return View();
+        }
+        public async Task<IActionResult> DieuKhoan()
+        {
+            var model = _context.loais.ToList();
+            ViewBag.model = model;
+
+
+
+
+            return View();
+        }
+        public async Task<IActionResult> ChinhSach()
+        {
+            var model = _context.loais.ToList();
+            ViewBag.model = model;
+
+
+
+
+            return View();
+        }
+        public async Task<IActionResult> Contact()
+        {
+            var model = _context.loais.ToList();
+            ViewBag.model = model;
+
+
+
+
+            return View();
+        }
+        public async Task<IActionResult> Showsp(int? id)
         {
             var model = _context.loais.ToList();
             ViewBag.model = model;
            
             var loai = _context.HangHoas
                 .Where(m => m.MaLoai == id).AsNoTracking().OrderBy(p => p.TenHH);
-            var models = await PagingList.CreateAsync(loai, 1, page);
+      
          
 
            
           
-            return View(models);
+            return View(loai);
 
         }
 
@@ -73,6 +124,13 @@ namespace WebBanHang.Controllers
                .Where(m => m.MaLoai == id2).AsNoTracking().OrderBy(p => p.NgayDang);
             var loai3s = await PagingList.CreateAsync(loai3, 5, page);
             ViewBag.loai3s = loai3s;
+
+
+            var loai4 = _context.BaiViet
+              .Where(m => m.MaLoai == id2).AsNoTracking().OrderBy(p => p.ID);
+            var loai4s = await PagingList.CreateAsync(loai4, 3, page);
+            ViewBag.loai4s = loai4s;
+
             if (loai == null)
             {
                 return NotFound();
@@ -80,6 +138,58 @@ namespace WebBanHang.Controllers
 
             return View(loai);
         }
+        
+
+        // POST: Contacts/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Contact([Bind("ID,Name,Email,Phone,NoiDung")] Contact contact)
+        {
+            var model = _context.loais.ToList();
+            ViewBag.model = model;
+            if (ModelState.IsValid)
+            {
+                _context.Add(contact);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(contact);
+        }
+
+        public async Task<IActionResult> XemBaiViet(int? id,int? id2,int page=1)
+        {
+            var model = _context.loais.ToList();
+            ViewBag.model = model;
+            var loai3 = _context.HangHoas
+             .Where(m => m.MaLoai == id2).AsNoTracking().OrderBy(p => p.NgayDang);
+            var loai3s = await PagingList.CreateAsync(loai3, 5, page);
+            ViewBag.loai3s = loai3s;
+
+
+            var loai4 = _context.BaiViet
+              .Where(m => m.MaLoai == id2).AsNoTracking().OrderBy(p => p.ID);
+            var loai4s = await PagingList.CreateAsync(loai4, 3, page);
+            ViewBag.loai4s = loai4s;
+           
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var loai = await _context.BaiViet
+                .FirstOrDefaultAsync(m => m.ID == id);
+            
+         
+            if (loai == null)
+            {
+                return NotFound();
+            }
+
+            return View(loai);
+        }
+
         public IActionResult Search(string Keyword = "")
         {
             var model = _context.loais.ToList();

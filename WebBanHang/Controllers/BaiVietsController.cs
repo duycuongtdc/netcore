@@ -45,6 +45,7 @@ namespace WebBanHang.Controllers
         // GET: BaiViets/Create
         public IActionResult Create()
         {
+            ViewData["MaLoai"] = new SelectList(_context.loais, "MaLoai", "TenLoai");
             return View();
         }
 
@@ -53,7 +54,7 @@ namespace WebBanHang.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,NoiDung,MaLoai")] BaiViet baiViet)
+        public async Task<IActionResult> Create([Bind("ID,TieuDe,NoiDung,Hinh,MaLoai")] BaiViet baiViet)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +86,7 @@ namespace WebBanHang.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,NoiDung,MaLoai")] BaiViet baiViet)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,TieuDe,NoiDung,Hinh,MaLoai")] BaiViet baiViet)
         {
             if (id != baiViet.ID)
             {

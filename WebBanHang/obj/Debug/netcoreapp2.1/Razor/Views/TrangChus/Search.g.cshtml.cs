@@ -65,7 +65,7 @@ using WebBanHang.Models;
             WriteLiteral("\r\n\r\n\r\n<h3>");
             EndContext();
             BeginContext(153, 72, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "31d3622345fa4b77bff4b87cbe15f6d9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1ddcf3c585c84573b2d4f2101ba99bea", async() => {
                 BeginContext(204, 17, true);
                 WriteLiteral("Tìm kiếm nâng cao");
                 EndContext();
@@ -133,7 +133,7 @@ using WebBanHang.Models;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(858, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f3020eac8aa7445b99f6a4011162067d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5229715ac2b04dbabb720ac4ea7d9b18", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
