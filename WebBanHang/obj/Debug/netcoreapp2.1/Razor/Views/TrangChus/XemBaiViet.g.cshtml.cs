@@ -141,7 +141,7 @@ using WebBanHang.Models;
             WriteLiteral("div>\r\n                            <div class=\"review-form\">\r\n                                <h4>Write a review</h4>\r\n                                ");
             EndContext();
             BeginContext(3220, 946, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eaf60e5ef85f45469ec6ec41372c3f03", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "10fc78ccc32645f09e495afe37c8f218", async() => {
                 BeginContext(3281, 878, true);
                 WriteLiteral(@"
                                     <label>
